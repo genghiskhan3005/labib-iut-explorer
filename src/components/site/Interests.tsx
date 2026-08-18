@@ -44,11 +44,11 @@ export function Interests() {
     <section id="interests" className="border-t border-hairline py-12 sm:py-16">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal>
-          <p className="eyebrow">05 — Currently Exploring</p>
+          <p className="eyebrow">05 — Beyond the Classroom</p>
         </Reveal>
         <Reveal delay={70}>
           <h2 className="mt-4 max-w-2xl text-3xl font-semibold sm:text-4xl">
-            Beyond the classroom.
+            Currently focused on machine learning.
           </h2>
         </Reveal>
         <Reveal delay={110}>

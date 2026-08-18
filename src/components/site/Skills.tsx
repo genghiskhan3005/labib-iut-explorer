@@ -1,5 +1,5 @@
 import { Reveal } from "./Reveal";
-import { EXPLORING, SKILL_GROUPS } from "./data";
+import { SKILL_GROUPS } from "./data";
 
 export function Skills() {
   return (
@@ -39,23 +39,6 @@ export function Skills() {
           ))}
         </div>
 
-        <Reveal delay={120}>
-          <div className="mt-14 rounded-xl border border-dashed border-border bg-surface p-6 sm:p-8">
-            <h3 className="font-mono text-[0.68rem] tracking-widest text-muted-foreground uppercase">
-              Currently exploring — not claiming expertise
-            </h3>
-            <ul className="mt-4 flex flex-wrap gap-2">
-              {EXPLORING.map((s) => (
-                <li
-                  key={s}
-                  className="rounded-md border border-accent/25 bg-accent-soft/60 px-3 py-1.5 text-[0.82rem] font-medium text-accent transition-all duration-200 hover:-translate-y-0.5"
-                >
-                  {s}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </Reveal>
       </div>
     </section>
   );

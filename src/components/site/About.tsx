@@ -1,14 +1,6 @@
 import { User } from "lucide-react";
 import { Reveal } from "./Reveal";
 
-const TAGS = [
-  "Machine Learning",
-  "Game Development",
-  "Cybersecurity",
-  "Quantum Computing",
-  "Automation",
-];
-
 export function About() {
   return (
     <section id="about" className="border-t border-hairline py-12 sm:py-16">
@@ -38,7 +30,7 @@ export function About() {
           <div>
             <Reveal delay={80}>
               <h2 className="text-3xl font-semibold sm:text-4xl">
-                Currently focused on machine learning.
+                A CSE student at IUT, still exploring.
               </h2>
             </Reveal>
             <Reveal delay={140}>
@@ -56,18 +48,6 @@ export function About() {
                   n8n workflow automation.
                 </p>
               </div>
-            </Reveal>
-            <Reveal delay={200}>
-              <ul className="mt-8 flex flex-wrap gap-2">
-                {TAGS.map((t) => (
-                  <li
-                    key={t}
-                    className="rounded-md border border-border bg-card px-3 py-1.5 text-[0.78rem] font-medium transition-all duration-200 hover:-translate-y-0.5 hover:border-accent/40 hover:bg-accent-soft hover:text-accent"
-                  >
-                    {t}
-                  </li>
-                ))}
-              </ul>
             </Reveal>
           </div>
         </div>
