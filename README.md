@@ -1,86 +1,92 @@
-# Labib Bin Monsur — Portfolio
+# Hi, I'm Labib
 
-Personal portfolio site for Labib Bin Monsur, a Computer Science and Engineering
-student at Islamic University of Technology (IUT).
+This is the source for my personal portfolio site. I'm a Computer Science and
+Engineering student at Islamic University of Technology (IUT), and I built
+this to show off what I've been working on — my projects, the skills I've
+picked up so far, and what I'm currently curious about (machine learning,
+mostly, with some cybersecurity and quantum computing curiosity on the side).
 
 **Live:** https://labib-iut-explorer.lovable.app
 **GitHub Pages:** https://genghiskhan3005.github.io/portfolio_website/
 
-## Tech stack
+## What it's built with
 
 - [TanStack Start](https://tanstack.com/start) (React 19, file-based routing, SSR)
 - [Tailwind CSS v4](https://tailwindcss.com/)
 - [shadcn/ui](https://ui.shadcn.com/) + [Radix UI](https://www.radix-ui.com/) primitives
 - TypeScript, Vite
 
-## Getting started
+## Running it yourself
 
-This project uses [bun](https://bun.sh/) — `bun.lock` is the canonical lockfile.
+I use [bun](https://bun.sh/) — `bun.lock` is the lockfile I actually commit.
 
 ```sh
 bun install
 bun run dev
 ```
 
-npm works too if you don't have bun installed (just don't commit the resulting
-`package-lock.json` — it's gitignored):
+If you don't have bun installed, npm works fine too (just don't commit the
+`package-lock.json` it generates — I've gitignored it):
 
 ```sh
 npm install
 npm run dev
 ```
 
-The dev server prints a local URL (Vite picks a free port, typically `8080`).
+The dev server prints a local URL when it's ready (Vite picks whatever port
+is free, usually `8080`).
 
 ### Scripts
 
-| Command | Description |
+| Command | What it does |
 | --- | --- |
-| `dev` | Start the Vite dev server |
+| `dev` | Starts the Vite dev server |
 | `build` | Production build |
 | `build:dev` | Development-mode build |
 | `preview` | Preview a production build locally |
-| `lint` | Run ESLint |
-| `format` | Format the codebase with Prettier |
-| `build:gh-pages` | Static client-only build for GitHub Pages (see below) |
+| `lint` | Runs ESLint |
+| `format` | Formats everything with Prettier |
+| `build:gh-pages` | The static build I actually deploy (see below) |
 
-## Deployment
+## How I deploy it
 
-Pushes to `main` auto-deploy to GitHub Pages via
-`.github/workflows/deploy.yml`. The site has no server functions or data
-loaders, so that build skips TanStack Start's normal SSR pipeline — Nitro's
-`static`/`github-pages` presets don't build successfully with this project's
-pinned `nitro` version — and instead does a plain client-only build:
-`gh-pages/index.html` + `src/entry-client-static.tsx` mount the same app with
-`createRoot` instead of hydration. `vite.gh-pages.config.ts` sets the
-`/portfolio_website/` base path GitHub Pages serves this repo from.
+Every push to `main` auto-deploys to GitHub Pages through
+`.github/workflows/deploy.yml`. Getting there took a bit of troubleshooting:
+this site has no server functions or data loaders, so I originally wanted
+TanStack Start's normal SSR/prerender pipeline to just spit out static HTML —
+but Nitro's `static`/`github-pages` presets wouldn't build with the `nitro`
+version this project is pinned to, no matter what I tried. So instead I ship
+a plain client-only build: `gh-pages/index.html` + `src/entry-client-static.tsx`
+mount the exact same app with `createRoot` instead of hydration.
+`vite.gh-pages.config.ts` handles the `/portfolio_website/` base path GitHub
+Pages serves this repo under.
 
-One manual step is required once: in the repo's Settings → Pages, set
-**Source** to **GitHub Actions** (not "Deploy from a branch").
+One manual step if you're setting this up fresh: in the repo's Settings →
+Pages, set **Source** to **GitHub Actions** (not "Deploy from a branch").
 
-## Project structure
+## How it's organized
 
 ```
 src/
   components/
-    site/       # Page sections (Hero, About, Projects, Skills, ...) and their content in data.ts
+    site/       # Each section of the page (Hero, About, Projects, Skills, ...) — content lives in data.ts
     ui/         # shadcn/ui primitives
   routes/       # TanStack Start file-based routes (index.tsx = "/")
-  styles.css    # Design tokens (colors, fonts) and global styles
+  styles.css    # Colors, fonts, and global styles
 ```
 
-Each section of the site is a standalone component under `src/components/site/`,
-composed together in `src/routes/index.tsx`. Most editable content (projects,
-skills, education, links) lives in `src/components/site/data.ts`.
+Every section is its own component under `src/components/site/`, all pulled
+together in `src/routes/index.tsx`. If I want to update my projects, skills,
+education, or links, I just edit `src/components/site/data.ts`.
 
-## Sections
+## What's on the page
 
 Home · About · Education · Courses Completed · Projects · Interests ·
 Repos · Skills · Beyond Code · Contact
 
-## Notes
+## A couple of notes to myself
 
-- This project was originally scaffolded with [Lovable](https://lovable.dev);
-  see `AGENTS.md` for the sync notes that apply if you're still using it.
-- `routeTree.gen.ts` is auto-generated by the TanStack Router plugin — don't
-  edit it by hand.
+- I originally scaffolded this with [Lovable](https://lovable.dev) — `AGENTS.md`
+  has the sync notes that still apply if I go back to editing there.
+- `routeTree.gen.ts` is auto-generated by the TanStack Router plugin — I don't
+  touch it by hand.
