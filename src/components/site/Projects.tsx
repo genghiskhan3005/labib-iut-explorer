@@ -22,18 +22,15 @@ export function Projects() {
   const [open, setOpen] = useState<Project | null>(null);
 
   return (
-    <section id="projects" className="border-t border-hairline bg-surface py-12 sm:py-16">
+    <section id="projects" className="border-t border-hairline py-8 sm:py-10">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal>
-          <p className="eyebrow">02 — Projects</p>
-        </Reveal>
-        <Reveal delay={70}>
-          <h2 className="mt-4 max-w-2xl text-3xl font-semibold sm:text-4xl">
+          <h2 className="max-w-2xl text-4xl font-bold sm:text-5xl">
             Four academic projects I&rsquo;ve built so far.
           </h2>
         </Reveal>
 
-        <div className="mt-8 grid gap-6 md:grid-cols-2">
+        <div className="mt-6 grid gap-6 md:grid-cols-2">
           {PROJECTS.map((p, i) => {
             const Art = ART[p.id] ?? MirathArt;
             return (
@@ -43,7 +40,7 @@ export function Projects() {
                     <Art className="h-44 w-full transition-transform duration-500 group-hover:scale-[1.03]" />
                   </div>
 
-                  <div className="flex flex-1 flex-col p-6">
+                  <div className="flex flex-1 flex-col p-5">
                     <div className="flex flex-wrap items-center gap-2">
                       {p.badges.map((b) => (
                         <span
@@ -55,7 +52,7 @@ export function Projects() {
                       ))}
                     </div>
 
-                    <h3 className="mt-4 text-xl font-semibold">{p.title}</h3>
+                    <h3 className="mt-4 text-xl font-bold">{p.title}</h3>
                     <p className="mt-1 text-[0.78rem] text-muted-foreground">{p.context}</p>
                     <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
                       {p.summary}
@@ -75,7 +72,7 @@ export function Projects() {
                     <button
                       type="button"
                       onClick={() => setOpen(p)}
-                      className="mt-6 inline-flex w-fit items-center gap-1.5 text-sm font-medium text-accent"
+                      className="mt-6 inline-flex w-fit items-center gap-1.5 text-sm font-semibold text-accent"
                     >
                       <span className="link-underline">Explore project</span>
                       <ArrowUpRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -106,13 +103,13 @@ export function Projects() {
 
               <div className="space-y-6 pt-2">
                 <div>
-                  <h4 className="text-sm font-semibold">Core idea</h4>
+                  <h4 className="text-sm font-bold">Core idea</h4>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                     {open.coreIdea}
                   </p>
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold">Technical focus</h4>
+                  <h4 className="text-sm font-bold">Technical focus</h4>
                   <ul className="mt-3 flex flex-wrap gap-1.5">
                     {open.focus.map((f) => (
                       <li

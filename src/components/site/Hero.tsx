@@ -4,7 +4,7 @@ import { LINKS } from "./data";
 
 export function Hero() {
   return (
-    <section id="home" className="relative overflow-hidden pt-24 pb-12 sm:pt-28 sm:pb-16">
+    <section id="home" className="relative overflow-hidden pt-16 pb-8 sm:pt-20 sm:pb-10">
       <div className="grid-faint mask-fade-b pointer-events-none absolute inset-0 -z-10" />
       <div
         className="pointer-events-none absolute -top-40 left-1/2 -z-10 h-[420px] w-[720px] -translate-x-1/2 rounded-full opacity-60 blur-3xl"
@@ -20,44 +20,46 @@ export function Hero() {
         </Reveal>
 
         <Reveal delay={70}>
-          <h1 className="mt-4 text-[2.6rem] leading-[1.02] font-semibold sm:text-6xl lg:text-7xl">
+          <h1 className="mt-3 text-[3rem] leading-[1.0] font-bold sm:text-7xl lg:text-8xl">
             Labib Bin Monsur
           </h1>
         </Reveal>
 
         <Reveal delay={130}>
-          <p className="mt-5 font-display text-lg font-medium text-muted-foreground sm:text-xl">
+          <p className="mt-3 font-display text-lg font-semibold text-muted-foreground sm:text-xl">
             Computer Science Student at IUT
           </p>
         </Reveal>
 
         <Reveal delay={180}>
-          <p className="mt-5 max-w-xl text-[0.98rem] leading-relaxed text-muted-foreground">
-            Exploring machine learning, software systems, game development, and emerging
-            technologies.
-          </p>
+          <ul className="mt-6 flex flex-wrap gap-2">
+            {["Machine Learning", "Cybersecurity", "Quantum Computing", "n8n Automation"].map(
+              (topic) => (
+                <li
+                  key={topic}
+                  className="rounded-full border border-foreground/25 bg-foreground/5 px-3.5 py-1.5 text-sm font-bold text-foreground"
+                >
+                  {topic}
+                </li>
+              ),
+            )}
+          </ul>
         </Reveal>
 
         <Reveal delay={240}>
-          <div className="mt-9 flex flex-wrap items-center gap-3">
+          <div className="mt-4 flex flex-wrap items-center gap-3">
             <a
               href="#projects"
-              className="group inline-flex items-center gap-2 rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lift"
+              className="group inline-flex items-center gap-2 rounded-md bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lift"
             >
               View Projects
               <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
-            </a>
-            <a
-              href="#contact"
-              className="inline-flex items-center gap-2 rounded-md border border-border px-5 py-2.5 text-sm font-medium transition-all duration-200 hover:-translate-y-0.5 hover:border-accent hover:text-accent"
-            >
-              Get in Touch
             </a>
           </div>
         </Reveal>
 
         <Reveal delay={300}>
-          <div className="mt-10 flex items-center gap-5 text-muted-foreground">
+          <div className="mt-7 flex items-center gap-5 text-muted-foreground">
             <a
               href={LINKS.github}
               target="_blank"

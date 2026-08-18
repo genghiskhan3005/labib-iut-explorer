@@ -3,13 +3,9 @@ import { Reveal } from "./Reveal";
 
 export function About() {
   return (
-    <section id="about" className="border-t border-hairline py-12 sm:py-16">
+    <section id="about" className="border-t border-hairline py-8 sm:py-10">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
-        <Reveal>
-          <p className="eyebrow">01 — About</p>
-        </Reveal>
-
-        <div className="mt-10 grid gap-12 lg:grid-cols-[320px_1fr] lg:gap-16">
+        <div className="grid gap-8 lg:grid-cols-[320px_1fr] lg:gap-10">
           <Reveal>
             <figure className="group relative">
               <div className="aspect-4/5 overflow-hidden rounded-xl border border-border bg-surface transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-lift">
@@ -29,7 +25,7 @@ export function About() {
 
           <div>
             <Reveal delay={80}>
-              <h2 className="text-3xl font-semibold sm:text-4xl">
+              <h2 className="text-4xl font-bold sm:text-5xl">
                 A CSE student at IUT, still exploring.
               </h2>
             </Reveal>

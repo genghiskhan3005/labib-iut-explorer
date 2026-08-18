@@ -81,7 +81,10 @@ export const SKILL_GROUPS = [
   { title: "Application / UI Development", items: ["JavaFX", "HTML", "CSS"] },
   { title: "Database", items: ["PostgreSQL"] },
   { title: "Tools & Version Control", items: ["Git", "GitHub"] },
-  { title: "Machine Learning", items: ["Machine Learning fundamentals"] },
+  {
+    title: "Machine Learning",
+    items: ["NumPy", "Pandas", "Matplotlib", "Seaborn", "Scikit-learn"],
+  },
 ];
 
 export const EXPLORING = ["Godot", "n8n", "Cybersecurity", "Quantum Computing"];

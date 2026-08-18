@@ -5,10 +5,10 @@ import { cn } from "@/lib/utils";
 const LINKS = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },
-  { id: "projects", label: "Projects" },
-  { id: "skills", label: "Skills" },
   { id: "education", label: "Education" },
+  { id: "projects", label: "Projects" },
   { id: "interests", label: "Interests" },
+  { id: "skills", label: "Skills" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -63,7 +63,7 @@ export function Nav() {
       >
         <a
           href="#home"
-          className="font-display text-sm font-semibold tracking-tight"
+          className="font-display text-sm font-bold tracking-tight"
           aria-label="Labib Bin Monsur — home"
         >
           Labib<span className="text-accent">.</span>
@@ -76,7 +76,7 @@ export function Nav() {
                 href={`#${l.id}`}
                 aria-current={active === l.id ? "true" : undefined}
                 className={cn(
-                  "link-underline text-[0.8rem] font-medium tracking-tight transition-colors duration-200",
+                  "link-underline text-[0.8rem] font-semibold tracking-tight transition-colors duration-200",
                   active === l.id ? "text-accent" : "text-muted-foreground hover:text-foreground",
                 )}
               >
@@ -88,7 +88,7 @@ export function Nav() {
 
         <a
           href="#contact"
-          className="hidden rounded-md border border-border px-3.5 py-1.5 text-[0.78rem] font-medium transition-all duration-200 hover:-translate-y-0.5 hover:border-accent hover:text-accent md:inline-flex"
+          className="hidden rounded-md border border-border px-3.5 py-1.5 text-[0.78rem] font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:border-accent hover:text-accent md:inline-flex"
         >
           Get in touch
         </a>
@@ -117,7 +117,7 @@ export function Nav() {
                 href={`#${l.id}`}
                 onClick={() => setOpen(false)}
                 className={cn(
-                  "block border-b border-hairline/70 py-3 text-sm font-medium last:border-0",
+                  "block border-b border-hairline/70 py-3 text-sm font-semibold last:border-0",
                   active === l.id ? "text-accent" : "text-muted-foreground",
                 )}
               >

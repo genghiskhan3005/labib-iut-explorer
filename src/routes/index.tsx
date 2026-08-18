@@ -5,8 +5,10 @@ import { About } from "@/components/site/About";
 import { Projects } from "@/components/site/Projects";
 import { Skills } from "@/components/site/Skills";
 import { Education } from "@/components/site/Education";
+import { Curriculum } from "@/components/site/Curriculum";
 import { Interests } from "@/components/site/Interests";
-import { GithubBeyond } from "@/components/site/GithubBeyond";
+import { Repos } from "@/components/site/Repos";
+import { BeyondCode } from "@/components/site/BeyondCode";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
 
@@ -55,11 +57,13 @@ function Index() {
       <main>
         <Hero />
         <About />
-        <Projects />
-        <Skills />
         <Education />
+        <Curriculum />
+        <Projects />
         <Interests />
-        <GithubBeyond />
+        <Repos />
+        <Skills />
+        <BeyondCode />
         <Contact />
       </main>
       <Footer />
