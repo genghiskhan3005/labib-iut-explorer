@@ -41,7 +41,7 @@ const ITEMS = [
 
 export function Interests() {
   return (
-    <section id="interests" className="border-t border-hairline py-20 sm:py-28">
+    <section id="interests" className="border-t border-hairline py-12 sm:py-16">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal>
           <p className="eyebrow">05 — Currently Exploring</p>
@@ -58,7 +58,7 @@ export function Interests() {
           </p>
         </Reveal>
 
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {ITEMS.map((it, i) => (
             <Reveal key={it.title} delay={i * 60} className={it.primary ? "lg:col-span-3" : ""}>
               <div

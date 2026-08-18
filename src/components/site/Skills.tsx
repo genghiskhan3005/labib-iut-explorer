@@ -3,7 +3,7 @@ import { EXPLORING, SKILL_GROUPS } from "./data";
 
 export function Skills() {
   return (
-    <section id="skills" className="border-t border-hairline py-20 sm:py-28">
+    <section id="skills" className="border-t border-hairline py-12 sm:py-16">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal>
           <p className="eyebrow">03 — Skills</p>
@@ -14,7 +14,7 @@ export function Skills() {
           </h2>
         </Reveal>
 
-        <div className="mt-12 grid gap-x-12 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid gap-x-12 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
           {SKILL_GROUPS.map((g, i) => (
             <Reveal key={g.title} delay={i * 60}>
               <h3 className="font-mono text-[0.68rem] tracking-widest text-muted-foreground uppercase">

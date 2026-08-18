@@ -3,7 +3,7 @@ import { EDUCATION } from "./data";
 
 export function Education() {
   return (
-    <section id="education" className="border-t border-hairline bg-surface py-20 sm:py-28">
+    <section id="education" className="border-t border-hairline bg-surface py-12 sm:py-16">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal>
           <p className="eyebrow">04 — Education</p>
@@ -14,10 +14,10 @@ export function Education() {
           </h2>
         </Reveal>
 
-        <ol className="mt-12 space-y-12 border-l border-border pl-6 sm:pl-8">
+        <ol className="mt-8 space-y-8 border-l border-border pl-6 sm:pl-8">
           {EDUCATION.map((e, i) => (
             <Reveal key={e.school} delay={i * 80} as="li">
-              <div className="relative pb-10 last:pb-0">
+              <div className="relative pb-6 last:pb-0">
                 <span
                   aria-hidden="true"
                   className={

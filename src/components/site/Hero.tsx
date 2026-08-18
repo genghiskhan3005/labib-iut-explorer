@@ -4,7 +4,7 @@ import { LINKS } from "./data";
 
 export function Hero() {
   return (
-    <section id="home" className="relative overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-28">
+    <section id="home" className="relative overflow-hidden pt-24 pb-12 sm:pt-28 sm:pb-16">
       <div className="grid-faint mask-fade-b pointer-events-none absolute inset-0 -z-10" />
       <div
         className="pointer-events-none absolute -top-40 left-1/2 -z-10 h-[420px] w-[720px] -translate-x-1/2 rounded-full opacity-60 blur-3xl"

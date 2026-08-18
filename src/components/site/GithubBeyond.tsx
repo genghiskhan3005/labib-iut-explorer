@@ -4,13 +4,13 @@ import { LINKS } from "./data";
 
 export function GithubBeyond() {
   return (
-    <section className="border-t border-hairline bg-surface py-20 sm:py-28">
+    <section className="border-t border-hairline bg-surface py-12 sm:py-16">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal>
           <p className="eyebrow">06 — Building & Learning</p>
         </Reveal>
 
-        <div className="mt-8 flex flex-col gap-6 border-b border-hairline pb-14 sm:flex-row sm:items-end sm:justify-between">
+        <div className="mt-8 flex flex-col gap-6 border-b border-hairline pb-10 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <h2 className="max-w-xl text-3xl font-semibold sm:text-4xl">
               Most of my learning happens in public repositories.
@@ -33,7 +33,7 @@ export function GithubBeyond() {
           </a>
         </div>
 
-        <div className="pt-14">
+        <div className="pt-10">
           <p className="eyebrow">Beyond Code</p>
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
             <Reveal>
