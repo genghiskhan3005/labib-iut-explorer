@@ -27,15 +27,13 @@ jobs:
 
       - run: bun install --frozen-lockfile
 
-      - run: bun run build
-        env:
-          NITRO_PRESET: github-pages
+      - run: bun run build:gh-pages
 
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ./.output/public
+          path: ./dist/gh-pages
 
   deploy:
     needs: build
