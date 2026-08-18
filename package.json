@@ -1,5 +1,6 @@
 {
-  "name": "tanstack_start_ts",
+  "name": "labib-iut-explorer",
+  "description": "Personal portfolio of Labib Bin Monsur, a CSE student at IUT.",
   "private": true,
   "sideEffects": false,
   "type": "module",
