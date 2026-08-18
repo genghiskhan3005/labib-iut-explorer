@@ -35,7 +35,7 @@ export function Projects() {
 
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {PROJECTS.map((p, i) => {
-            const Art = ART[p.id];
+            const Art = ART[p.id] ?? MirathArt;
             return (
               <Reveal key={p.id} delay={i * 70} as="article">
                 <div className="group flex h-full flex-col overflow-hidden rounded-xl border border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:shadow-lift">
