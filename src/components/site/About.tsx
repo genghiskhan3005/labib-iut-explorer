@@ -49,18 +49,6 @@ export function About() {
                 </p>
               </div>
             </Reveal>
-            <Reveal delay={200}>
-              <ul className="mt-8 flex flex-wrap gap-2">
-                {TAGS.map((t) => (
-                  <li
-                    key={t}
-                    className="rounded-md border border-border bg-card px-3 py-1.5 text-[0.78rem] font-medium transition-all duration-200 hover:-translate-y-0.5 hover:border-accent/40 hover:bg-accent-soft hover:text-accent"
-                  >
-                    {t}
-                  </li>
-                ))}
-              </ul>
-            </Reveal>
           </div>
         </div>
       </div>
