@@ -14,9 +14,6 @@ export function About() {
                   className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
                 />
               </div>
-              <figcaption className="mt-3 font-mono text-[0.65rem] tracking-widest text-muted-foreground uppercase">
-                Dhaka, Bangladesh
-              </figcaption>
             </figure>
           </Reveal>
 
