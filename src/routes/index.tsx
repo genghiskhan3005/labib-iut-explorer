@@ -1,24 +1,68 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Nav } from "@/components/site/Nav";
+import { Hero } from "@/components/site/Hero";
+import { About } from "@/components/site/About";
+import { Projects } from "@/components/site/Projects";
+import { Skills } from "@/components/site/Skills";
+import { Education } from "@/components/site/Education";
+import { Interests } from "@/components/site/Interests";
+import { GithubBeyond } from "@/components/site/GithubBeyond";
+import { Contact } from "@/components/site/Contact";
+import { Footer } from "@/components/site/Footer";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const TITLE = "Labib Bin Monsur | Computer Science Student";
+const DESC =
+  "Portfolio of Labib Bin Monsur, a Computer Science and Engineering student at IUT exploring machine learning, software development, game development, and emerging technologies.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: TITLE },
+      { name: "description", content: DESC },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESC },
+      { property: "og:type", content: "profile" },
+      { property: "og:url", content: "/" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Labib Bin Monsur",
+          jobTitle: "Computer Science and Engineering Student",
+          affiliation: { "@type": "CollegeOrUniversity", name: "Islamic University of Technology" },
+          address: { "@type": "PostalAddress", addressLocality: "Dhaka", addressCountry: "BD" },
+          email: "mailto:labibbinmonsur19@gmail.com",
+          sameAs: [
+            "https://github.com/genghiskhan3005",
+            "http://linkedin.com/in/labib-bin-monsur-b887a1316",
+          ],
+        }),
+      },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen">
+      <Nav />
+      <main>
+        <Hero />
+        <About />
+        <Projects />
+        <Skills />
+        <Education />
+        <Interests />
+        <GithubBeyond />
+        <Contact />
+      </main>
+      <Footer />
     </div>
   );
 }
