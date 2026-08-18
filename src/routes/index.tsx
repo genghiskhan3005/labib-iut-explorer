@@ -12,7 +12,7 @@ import { BeyondCode } from "@/components/site/BeyondCode";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
 
-const SITE_URL = "https://genghiskhan3005.github.io/labib-iut-explorer/";
+const SITE_URL = "https://genghiskhan3005.github.io/portfolio_website/";
 const TITLE = "Labib Bin Monsur | Computer Science Student";
 const DESC =
   "Portfolio of Labib Bin Monsur, a Computer Science and Engineering student at IUT exploring machine learning, software development, game development, and emerging technologies.";

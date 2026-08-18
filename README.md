@@ -4,7 +4,7 @@ Personal portfolio site for Labib Bin Monsur, a Computer Science and Engineering
 student at Islamic University of Technology (IUT).
 
 **Live:** https://labib-iut-explorer.lovable.app
-**GitHub Pages:** https://genghiskhan3005.github.io/labib-iut-explorer/
+**GitHub Pages:** https://genghiskhan3005.github.io/portfolio_website/
 
 ## Tech stack
 
@@ -53,7 +53,7 @@ loaders, so that build skips TanStack Start's normal SSR pipeline — Nitro's
 pinned `nitro` version — and instead does a plain client-only build:
 `gh-pages/index.html` + `src/entry-client-static.tsx` mount the same app with
 `createRoot` instead of hydration. `vite.gh-pages.config.ts` sets the
-`/labib-iut-explorer/` base path GitHub Pages serves this repo from.
+`/portfolio_website/` base path GitHub Pages serves this repo from.
 
 One manual step is required once: in the repo's Settings → Pages, set
 **Source** to **GitHub Actions** (not "Deploy from a branch").

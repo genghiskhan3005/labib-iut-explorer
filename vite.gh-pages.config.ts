@@ -13,7 +13,7 @@ import tailwindcss from "@tailwindcss/vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
-  base: "/labib-iut-explorer/",
+  base: "/portfolio_website/",
   plugins: [tailwindcss(), tsconfigPaths({ projects: ["./tsconfig.json"] }), react()],
   css: { transformer: "lightningcss" },
   build: {
