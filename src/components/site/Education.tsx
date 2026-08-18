@@ -14,7 +14,7 @@ export function Education() {
           </h2>
         </Reveal>
 
-        <ol className="mt-12 border-l border-border pl-6 sm:pl-8">
+        <ol className="mt-12 space-y-12 border-l border-border pl-6 sm:pl-8">
           {EDUCATION.map((e, i) => (
             <Reveal key={e.school} delay={i * 80} as="li">
               <div className="relative pb-10 last:pb-0">
