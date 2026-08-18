@@ -12,6 +12,7 @@ import { BeyondCode } from "@/components/site/BeyondCode";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
 
+const SITE_URL = "https://genghiskhan3005.github.io/labib-iut-explorer/";
 const TITLE = "Labib Bin Monsur | Computer Science Student";
 const DESC =
   "Portfolio of Labib Bin Monsur, a Computer Science and Engineering student at IUT exploring machine learning, software development, game development, and emerging technologies.";
@@ -24,10 +25,10 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },
       { property: "og:type", content: "profile" },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: SITE_URL },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: SITE_URL }],
     scripts: [
       {
         type: "application/ld+json",
