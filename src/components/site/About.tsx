@@ -11,7 +11,7 @@ const TAGS = [
 
 export function About() {
   return (
-    <section id="about" className="border-t border-hairline py-20 sm:py-28">
+    <section id="about" className="border-t border-hairline py-12 sm:py-16">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal>
           <p className="eyebrow">01 — About</p>

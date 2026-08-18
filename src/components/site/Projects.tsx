@@ -22,7 +22,7 @@ export function Projects() {
   const [open, setOpen] = useState<Project | null>(null);
 
   return (
-    <section id="projects" className="border-t border-hairline bg-surface py-20 sm:py-28">
+    <section id="projects" className="border-t border-hairline bg-surface py-12 sm:py-16">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal>
           <p className="eyebrow">02 — Projects</p>
@@ -33,7 +33,7 @@ export function Projects() {
           </h2>
         </Reveal>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
+        <div className="mt-8 grid gap-6 md:grid-cols-2">
           {PROJECTS.map((p, i) => {
             const Art = ART[p.id] ?? MirathArt;
             return (

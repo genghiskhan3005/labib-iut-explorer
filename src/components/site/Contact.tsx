@@ -16,7 +16,7 @@ const ROWS = [
 
 export function Contact() {
   return (
-    <section id="contact" className="border-t border-hairline py-20 sm:py-28">
+    <section id="contact" className="border-t border-hairline py-12 sm:py-16">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal>
           <p className="eyebrow">07 — Contact</p>
@@ -31,7 +31,7 @@ export function Contact() {
           </p>
         </Reveal>
 
-        <div className="mt-12 max-w-2xl divide-y divide-hairline border-y border-hairline">
+        <div className="mt-8 max-w-2xl divide-y divide-hairline border-y border-hairline">
           {ROWS.map((r, i) => (
             <Reveal key={r.label} delay={i * 60}>
               <a
