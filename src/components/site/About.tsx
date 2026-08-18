@@ -1,14 +1,6 @@
 import { User } from "lucide-react";
 import { Reveal } from "./Reveal";
 
-const TAGS = [
-  "Machine Learning",
-  "Game Development",
-  "Cybersecurity",
-  "Quantum Computing",
-  "Automation",
-];
-
 export function About() {
   return (
     <section id="about" className="border-t border-hairline py-12 sm:py-16">
