@@ -30,7 +30,7 @@ export function About() {
           <div>
             <Reveal delay={80}>
               <h2 className="text-3xl font-semibold sm:text-4xl">
-                Currently focused on machine learning.
+                A CSE student at IUT, still exploring.
               </h2>
             </Reveal>
             <Reveal delay={140}>
