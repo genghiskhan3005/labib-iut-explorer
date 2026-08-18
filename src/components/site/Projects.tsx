@@ -11,7 +11,7 @@ import { Reveal } from "./Reveal";
 import { PROJECTS, type Project } from "./data";
 import { CrediArt, HallArt, MirathArt, ReactoArt } from "./ProjectArt";
 
-const ART: Record<string, (p: { className?: string }) => React.ReactElement> = {
+const ART: Record<string, React.ComponentType<{ className?: string }>> = {
   "al-mirath": MirathArt,
   "hall-management-system": HallArt,
   crediflow: CrediArt,
