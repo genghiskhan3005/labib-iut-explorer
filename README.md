@@ -4,6 +4,7 @@ Personal portfolio site for Labib Bin Monsur, a Computer Science and Engineering
 student at Islamic University of Technology (IUT).
 
 **Live:** https://labib-iut-explorer.lovable.app
+**GitHub Pages:** https://genghiskhan3005.github.io/labib-iut-explorer/
 
 ## Tech stack
 
@@ -41,6 +42,21 @@ The dev server prints a local URL (Vite picks a free port, typically `8080`).
 | `preview` | Preview a production build locally |
 | `lint` | Run ESLint |
 | `format` | Format the codebase with Prettier |
+| `build:gh-pages` | Static client-only build for GitHub Pages (see below) |
+
+## Deployment
+
+Pushes to `main` auto-deploy to GitHub Pages via
+`.github/workflows/deploy.yml`. The site has no server functions or data
+loaders, so that build skips TanStack Start's normal SSR pipeline — Nitro's
+`static`/`github-pages` presets don't build successfully with this project's
+pinned `nitro` version — and instead does a plain client-only build:
+`gh-pages/index.html` + `src/entry-client-static.tsx` mount the same app with
+`createRoot` instead of hydration. `vite.gh-pages.config.ts` sets the
+`/labib-iut-explorer/` base path GitHub Pages serves this repo from.
+
+One manual step is required once: in the repo's Settings → Pages, set
+**Source** to **GitHub Actions** (not "Deploy from a branch").
 
 ## Project structure
 
